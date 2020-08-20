@@ -39,7 +39,10 @@ Manage Upload Files in: public/uploads
             Destroy DELETE: /api/roles/{id}
         }
 
-#Run commands:
+# Run:
+    Copy .env.example to .env
+    Config BD
+
     php artisan migrate
     php artisan db:seed
     php artisan serve
