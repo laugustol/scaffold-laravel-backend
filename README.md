@@ -1,5 +1,5 @@
 # Scaffold Backend Laravel 7.24
-Integracion with JWT
+Integration with JWT
 # Header authenticated
     {Authorization: "bearer yJ0eXAiOiJKV1........"}
 Manage Upload Files in: public/uploads
