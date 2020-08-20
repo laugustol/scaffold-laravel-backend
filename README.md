@@ -20,7 +20,21 @@ Manage Upload Files in: public/uploads
     authenticate:
         POST: /api/upload
             fields:{
-                image: file
+                image: File
             }
-        
-  
+        Roles:{
+            Index GET: /api/roles
+            Store POST: /api/roles
+                fields:{
+                    name: "Name"
+                }
+            Show GET: /api/roles/{id}
+            Update PUT: /api/roles/{id}
+                Headers:{
+                    'Content-Type':'application/x-www-form-urlencoded'
+                }
+                fields:{
+                    name: "Name"
+                }
+            Destroy DELETE: /api/roles/{id}
+        }

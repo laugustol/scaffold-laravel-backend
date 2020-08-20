@@ -50,6 +50,7 @@ class UserController extends Controller
         }
 
         $user = User::create([
+            'id_role' => 2,
             'name' => $request->get('name'),
             'email' => $request->get('email'),
             'password' => Hash::make($request->get('password')),
