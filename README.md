@@ -38,3 +38,8 @@ Manage Upload Files in: public/uploads
                 }
             Destroy DELETE: /api/roles/{id}
         }
+
+#Run commands:
+    php artisan migrate
+    php artisan db:seed
+    php artisan serve
