@@ -7,6 +7,7 @@ Manage Upload Files in: public/uploads
     GET:  /api/test
     POST: /api/register
         fields:{
+            id_account:1,
             name:"Name Example",
             email: "email@email.com",
             password: "12345678",
@@ -17,7 +18,7 @@ Manage Upload Files in: public/uploads
             email: "email@email.com",
             password: "12345678"
         }
-    authenticate:
+    authenticated:
         POST: /api/upload
             fields:{
                 image: File
@@ -37,6 +38,24 @@ Manage Upload Files in: public/uploads
                     name: "Name"
                 }
             Destroy DELETE: /api/roles/{id}
+        }
+        Accounts{
+            Index GET: /api/accounts
+            Store POST: /api/accounts
+                fields:{
+                    name: "Name",
+                    number_phone: "012345678"
+                }
+            Show GET: /api/accounts/{id}
+            Update PUT: /api/accounts/{id}
+                Headers:{
+                    'Content-Type':'application/x-www-form-urlencoded'
+                }
+                fields:{
+                    name: "Name",
+                    number_phone: "012345678"
+                }
+            Destroy DELETE: /api/accounts/{id}
         }
 
 # Run:

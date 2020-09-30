@@ -13,5 +13,6 @@ Route::post('/login', 'UserController@authenticate');
 Route::group(['middleware' => ['jwt.verify']], function() {
     Route::post('/upload', 'UserController@upload');
     Route::resource('roles', 'RoleController');
+    Route::resource('accounts', 'AccountController');
 
 });
